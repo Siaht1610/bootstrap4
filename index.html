@@ -104,7 +104,7 @@
                         title="Or Call us at +852 12345678" data-placement="bottom" data-target="#reserveform">Reserve
                         Table</a>
                 </div>
-                
+
             </div>
         </div>
     </header>
@@ -165,6 +165,14 @@
                             <span class="carousel-control-next-icon"></span>
                         </a>
 
+                    </div>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
                     </div>
 
                 </div>
@@ -288,16 +296,16 @@
                                 <label for="section" class="col-12 col-lg-2 col-form-label">Section</label>
                                 <div class="col-12 col-md-4">
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-success active">                                         
-                                                <input type="radio" name="options" id="option1" autocomplete="off"
-                                                    checked> Non-Smoking
+                                        <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                                            Non-Smoking
                                         </label>
-                                        <label class="btn btn-danger">                                         
-                                                <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                        <label class="btn btn-danger">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
                                         </label>
                                     </div>
                                 </div>
-                                
+
                             </div>
 
 
@@ -377,6 +385,18 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
+</script>
+
 
 </body>
 
