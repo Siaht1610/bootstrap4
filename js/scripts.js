@@ -10,4 +10,13 @@
                 $("#carouselButton").children("span").removeClass('fa-play');
                 $("#carouselButton").children("span").addClass('fa-pause');
             }
+        })
+
+        $("#reserveForm").click(function(){
+           $("#reserveform").modal('show');
         });
+
+        $("#Login").click(function(){
+            $("#loginModal").modal('show');
+        });
+        
